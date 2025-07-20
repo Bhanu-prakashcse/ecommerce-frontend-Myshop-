@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState , useCallback} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './Cart.css';
@@ -13,7 +13,7 @@ const Cart = () => {
   const [deliveryEstimate, setDeliveryEstimate] = useState('');
   const [paymentMethod, setPaymentMethod] = useState('');
 
-  const fetchCart = async () => {
+  const fetchCart = useCallback(async () => {
     try {
       const res = await axios.get("http://localhost:8080/api/cart/view", {
         headers: {
@@ -24,11 +24,11 @@ const Cart = () => {
     } catch (err) {
       console.error("Error fetching cart items:", err);
     }
-  };
+  }, [token]);
 
   useEffect(() => {
     fetchCart();
-  }, []);
+  }, [fetchCart]);
 
   const handlePlaceOrder = async () => {
     try {
