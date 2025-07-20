@@ -1,0 +1,45 @@
+.footer {
+    background: linear-gradient(to right, #1f1c2c, #464063);
+    color: #f8f8f8;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-content h3,
+  .footer-content h4 {
+    color: #00ffc8;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-content p,
+  .footer-content a {
+    font-size: 0.95rem;
+    color: #ddd;
+    text-decoration: none;
+  }
+  
+  .footer-content a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    color: #bbb;
+  }
+  
+
+  .footer {
+    background-color: red; /* just for testing */
+  }
+  

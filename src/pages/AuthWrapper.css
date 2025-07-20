@@ -1,0 +1,53 @@
+Add floating animation like GitHub
+.floating-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.floating-shapes span {
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.08);
+  animation: float 20s linear infinite;
+  border-radius: 50%;
+}
+
+.floating-shapes span:nth-child(1) {
+  top: 10%;
+  left: 5%;
+  width: 100px;
+  height: 100px;
+  animation-duration: 30s;
+}
+.floating-shapes span:nth-child(2) {
+  top: 30%;
+  left: 80%;
+}
+.floating-shapes span:nth-child(3) {
+  top: 70%;
+  left: 10%;
+}
+.floating-shapes span:nth-child(4) {
+  top: 50%;
+  left: 50%;
+}
+.floating-shapes span:nth-child(5) {
+  top: 85%;
+  left: 85%;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-1000px) rotate(360deg);
+  }
+}

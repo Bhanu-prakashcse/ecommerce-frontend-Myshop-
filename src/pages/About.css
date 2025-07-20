@@ -1,0 +1,145 @@
+.about-page {
+    padding: 2rem;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: #f1f1f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+  }
+  
+  .about-page h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #00ffc3;
+  }
+  
+  .about-banner {
+    display: block;
+    max-width: 450px;
+    margin: 1rem auto 1.5rem auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 200px rgba(232, 248, 62, 0.3);
+  }
+  
+  .tagline {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #ddd;
+    margin-bottom: 3rem;
+  }
+  
+  /* Mission Slider */
+  .mission-slider {
+    overflow: hidden;
+    position: relative;
+    height: 100px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .slide-track {
+    display: flex;
+    width: calc(250px * 10);
+    animation: scrollText 25s linear infinite;
+  }
+  
+  .slide {
+    flex: 0 0 250px;
+    text-align: center;
+    background-color: rgba(255,255,255,0.07);
+    margin: 0 10px;
+    padding: 0.7rem 1rem;
+    border-radius: 12px;
+    color: #00ffc3;
+    font-weight: 500;
+    box-shadow: 0 4px 20px rgba(244, 72, 10, 0.3);
+  }
+  
+  @keyframes scrollText {
+    10% { transform: translateX(0); }
+    50% { transform: translateX(-50%); }
+  }
+  
+  /* Why Shop With Us */
+  .why-shop {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .why-shop img {
+    width: 450px;
+    max-width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 4px 200px rgba(232, 248, 62, 0.3);
+  }
+  
+  .why-shop ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.05rem;
+    color: #a2cc22;
+    box-shadow: 0 4px 200px rgba(247, 9, 9, 0.3);
+  }
+  
+  .why-shop li {
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+  
+  /* Tech Section */
+  .about-page p {
+    margin-top: 1rem;
+    font-size: 1.05rem;
+    color: #2abc0c;
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  .tech-section {
+    background: linear-gradient(to right, #141e30, #243b55);
+    padding: 1rem;
+    border-radius: 5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align:justify;
+    box-shadow: 0 4px 20px rgba(244, 72, 10, 0.3);
+  }
+  
+  .tech-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #b3f5ee; /* Tailwind gray-800 */
+  }
+  
+  .tech-section ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .tech-section li {
+    background-color: #0a171a;
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
+    color: #6ad91b; /* Tailwind gray-700 */
+    transition: transform 0.2s ease;
+  }
+  
+  .tech-section li:hover {
+    transform: translateY(-3px);
+    background-color: #adc4f1; /* Tailwind gray-100 */
+  }
+  
+  

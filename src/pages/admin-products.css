@@ -1,0 +1,253 @@
+/* src/pages/admin.css */
+
+.admin-dashboard {
+    background: linear-gradient(to right, #002f4b, #8a2916);
+    min-height: 50vh;
+    padding: 40px;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .admin-dashboard h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 4px #000;
+  }
+  
+  .admin-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .admin-card {
+    background: #2c2c3e;
+    padding: 25px 35px;
+    border-radius: 16px;
+    text-align: center;
+    color: #f0f0f0;
+    text-decoration: none;
+    width: 220px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s, box-shadow 0.3s;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .admin-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(to right, #434343, #000000);
+  }
+  
+  .admin-card span {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .admin-card h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #ffffffcc;
+  }
+  
+
+.admin-products-container {
+    padding: 2rem;
+    text-align: center;
+    background: linear-gradient(to right, #141e30, #243b55);
+    min-height: 100vh;
+  }
+  
+  .admin-products-container h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #f1f1f1; /* Light text */
+  }
+  
+  .add-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .add-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #26a69a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-btn:hover {
+    background-color: #00796b;
+  }
+  
+  /* When form is open, align button to top-left of the form block */
+  .add-form-wrapper.active {
+    align-items: flex-start;
+  }
+  
+  .product-form {
+    width: 100%;
+    max-width: 570px;
+    background-color: #2c3e50;
+    padding: 20px;
+    border-radius: 1px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: white;
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .product-card {
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(255, 255, 255, 0.05);
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .product-card h3 {
+    margin: 0.8rem 0 0.2rem;
+    color: #f5f5f5;
+    font-size: 1.2rem;
+  }
+  
+  .price {
+    color: #f48fb1; /* Subtle pink for price */
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+  }
+  
+  .delete-btn {
+    background-color: #e53935;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c62828;
+  }
+
+
+  .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .edit-btn, .delete-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .edit-btn {
+    background-color: #1976d2;
+    color: #fff;
+  }
+  
+  .edit-btn:hover {
+    background-color: #1565c0;
+  }
+  
+  .delete-btn {
+    background-color: #e53935;
+    color: #fff;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c62828;
+  }
+  
+  .admin-form-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: linear-gradient(to right, #141e30, #243b55);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    color: #ecf0f1;
+  }
+  
+  .admin-form-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #f1f1f1;
+    border-bottom: 1px solid #f48fb1;
+    padding-bottom: 0.5rem;
+  }
+  
+  .admin-form-container form {
+    display: grid;
+    gap: 1.2rem;
+  }
+  
+  .admin-form-container input {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #34495e;
+    color: #ecf0f1;
+    font-size: 1rem;
+  }
+  
+  .admin-form-container input:focus {
+    outline: 2px solid #f48fb1;
+    background-color: #2a689a;
+  }
+  
+  .admin-form-container button {
+    background-color: #f48fb1;
+    color: #1e1e1e;
+    font-weight: bold;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .admin-form-container button:hover {
+    background-color: #ec407a;
+  }
+  

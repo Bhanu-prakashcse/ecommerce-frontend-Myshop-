@@ -1,0 +1,82 @@
+.contact-page {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 70vh;
+    background: linear-gradient(to right, #141e30, #243b55);
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .contact-left {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  .contact-left img {
+    width: 500%;
+    max-width: 900px;
+    border-radius: 30px;
+  }
+  
+  .contact-right {
+    flex: 1;
+    min-width: 320px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.4);
+    color: #f1f1f1;
+  }
+  
+  .contact-right h2 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    color: #00ffc3;
+  }
+  
+  .contact-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .contact-right input,
+  .contact-right textarea {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 0.9rem 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+  }
+  
+  .contact-right input::placeholder,
+  .contact-right textarea::placeholder {
+    color: #ccc;
+  }
+  
+  .contact-right button {
+    background: #00ffc3;
+    color: #000;
+    border: none;
+    padding: 0.9rem 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .contact-right button:hover {
+    background: #00e2aa;
+  }
+  
+  .contact-msg {
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+      
