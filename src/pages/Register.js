@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './AuthWrapper.css';
+import BASE_URL from '../config';
 
 const Register = () => {
   const [username, setUsername] = useState('');
@@ -12,7 +13,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:8080/api/auth/register?role=CUSTOMER", {
+      await axios.post(`${BASE_URL}/api/auth/register?role=CUSTOMER`, {
         username,
         password,
       });

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './AuthWrapper.css';
+import  BASE_URL from '../config';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -10,7 +11,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:8080/api/auth/login", {
+      const response = await axios.post(`${BASE_URL}/api/auth/login`, {
         username,
         password,
       });
