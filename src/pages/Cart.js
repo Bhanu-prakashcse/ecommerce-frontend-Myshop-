@@ -32,6 +32,7 @@ const Cart = () => {
   }, [fetchCart]);
 
   const handlePlaceOrder = async () => {
+    const token = localStorage.getItem("token");
     try {
       const res = await axios.post(`${BASE_URL}/api/cart/place-order`, {}, {
         headers: {
