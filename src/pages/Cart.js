@@ -33,6 +33,10 @@ const Cart = () => {
 
   const handlePlaceOrder = async () => {
     const token = localStorage.getItem("token");
+    if (!token) {
+      setMsg("Please login before placing order.");
+      return;
+    }
     try {
       const res = await axios.post(`${BASE_URL}/api/cart/place-order`, {}, {
         headers: {
