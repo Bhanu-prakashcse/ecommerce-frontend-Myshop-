@@ -2,6 +2,7 @@ import React, { useEffect, useState , useCallback} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './Cart.css';
+import BASE_URL from '../config';
 
 const Cart = () => {
   const [items, setItems] = useState([]);
@@ -15,7 +16,7 @@ const Cart = () => {
 
   const fetchCart = useCallback(async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/cart/view", {
+      const res = await axios.get(`${BASE_URL}/api/cart/view`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -32,7 +33,7 @@ const Cart = () => {
 
   const handlePlaceOrder = async () => {
     try {
-      const res = await axios.post("http://localhost:8080/api/cart/place-order", {}, {
+      const res = await axios.post(`${BASE_URL}/api/cart/place-order`, {}, {
         headers: {
           Authorization: `Bearer ${token}`
         }

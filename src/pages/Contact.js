@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Contact.css";
+import BASE_URL from "../config";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -18,7 +19,7 @@ const Contact = () => {
     setMsg("");        // 👈 Clear previous msg
 
     try {
-      await axios.post("http://localhost:8080/api/contact/send", form, {
+      await axios.post(`${BASE_URL}/api/contact/send`, form, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

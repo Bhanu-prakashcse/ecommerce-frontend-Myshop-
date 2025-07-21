@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useLocation, Link } from 'react-router-dom';
 import './SearchResults.css';
+import BASE_URL from '../config';
 
 const SearchResults = () => {
   const [products, setProducts] = useState([]);
@@ -11,8 +12,8 @@ const SearchResults = () => {
 
   useEffect(() => {
     if (keyword) {
-      axios.get(`http://localhost:8080/api/products/search?keyword=${keyword}`)
-        .then(res => setProducts(res.data))
+      axios.get(`${BASE_URL}/api/products/search?keyword=${keyword}`)
+      .then(res => setProducts(res.data))
         .catch(err => console.error("Failed to fetch search results:", err));
     }
   }, [keyword]);

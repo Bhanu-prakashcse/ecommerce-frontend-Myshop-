@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './admin.css';
+import BASE_URL from '../config';
 
 const AllOrdersAdmin = () => {
   const [orders, setOrders] = useState([]);
@@ -10,7 +11,7 @@ const AllOrdersAdmin = () => {
   const fetchOrders = async () => {
     const token = localStorage.getItem("token");
     try {
-      const res = await axios.get('http://localhost:8080/api/orders/all', {
+      const res = await axios.get(`${BASE_URL}/api/orders/all`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setOrders(res.data);
@@ -27,7 +28,7 @@ const AllOrdersAdmin = () => {
     const token = localStorage.getItem("token");
   
     try {
-      await axios.delete(`http://localhost:8080/api/orders/delete/${orderId}`, {
+      await axios.delete(`${BASE_URL}/api/orders/delete/${orderId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

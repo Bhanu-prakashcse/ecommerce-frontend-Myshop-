@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './admin.css';
+import BASE_URL from '../config';
 
 const AdminDashboard = () => {
   const [summary, setSummary] = useState({
@@ -22,8 +23,8 @@ const AdminDashboard = () => {
     }
 
     // Fetch orders
-  axios.get('http://localhost:8080/api/orders/all', {
-    headers: {
+    axios.get(`${BASE_URL}/api/orders/all`, {
+      headers: {
       Authorization: `Bearer ${token}`
     }
   })

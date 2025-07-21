@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Products.css";
+import BASE_URL from "../config";
 
 const CategoryProducts = () => {
   const { name } = useParams();
@@ -10,8 +11,8 @@ const CategoryProducts = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/api/products/category/${name}`)
-      .then(res => setProducts(res.data))
+    axios.get(`${BASE_URL}/api/products/category/${name}`)
+    .then(res => setProducts(res.data))
       .catch(err => console.error("Failed to fetch products:", err));
   }, [name]);
 

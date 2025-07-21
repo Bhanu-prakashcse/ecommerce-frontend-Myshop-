@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import axios from 'axios';
 import './Products.css';
+import BASE_URL from '../config';
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -11,7 +12,7 @@ const Products = () => {
   const categoryId = params.get("categoryId");
 
   useEffect(() => {
-    let url = "http://localhost:8080/api/products/all";
+    let url = `${BASE_URL}/api/products/all`;
     if (categoryId) {
       url += `?categoryId=${categoryId}`;
     }
@@ -24,7 +25,7 @@ const Products = () => {
   const handleAddToCart = async (productId) => {
     const token = localStorage.getItem("token");
     try {
-      await axios.post(`http://localhost:8080/api/cart/add?productId=${productId}&quantity=1`, {}, {
+      await axios.post(`${BASE_URL}/api/cart/add?productId=${productId}&quantity=1`, {}, {
         headers: {
           Authorization: `Bearer ${token}`
         }

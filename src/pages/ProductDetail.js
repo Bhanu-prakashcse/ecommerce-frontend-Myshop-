@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import "./ProductDetail.css";
+import BASE_URL from "../config";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -15,13 +16,13 @@ const ProductDetails = () => {
     // Scroll to top on new product load
     window.scrollTo(0, 0);
 
-    axios.get(`http://localhost:8080/api/products/${id}`)
-      .then(res => {
+    axios.get(`${BASE_URL}/api/products/${id}`)
+    .then(res => {
         setProduct(res.data);
 
         // Fetch related items (same category but exclude current item)
-        axios.get(`http://localhost:8080/api/products/category/${res.data.category.name}`)
-          .then(r => {
+        axios.get(`${BASE_URL}/api/products/category/${res.data.category.name}`)
+        .then(r => {
             const filtered = r.data.filter(p => p.id !== res.data.id);
             setRelated(filtered);
           });
@@ -32,7 +33,7 @@ const ProductDetails = () => {
   const handleAddToCart = async () => {
     try {
       await axios.post(
-        `http://localhost:8080/api/cart/add?productId=${id}&quantity=1`,
+        `${BASE_URL}/api/cart/add?productId=${id}&quantity=1`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );

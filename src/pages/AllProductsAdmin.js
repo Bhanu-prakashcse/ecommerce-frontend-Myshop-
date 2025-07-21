@@ -2,6 +2,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import './admin-products.css';
+import BASE_URL from '../config';
 
 const ITEMS_PER_PAGE = 12;
 
@@ -23,7 +24,7 @@ const AllProductsAdmin = () => {
   const token = localStorage.getItem("token");
 
   const fetchProducts = useCallback(() => {
-    axios.get('http://localhost:8080/api/products/all', {
+    axios.get(`${BASE_URL}/api/products/all`, {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => setProducts(res.data))
@@ -36,7 +37,7 @@ const AllProductsAdmin = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/api/products/${id}`, {
+      await axios.delete(`${BASE_URL}/api/products/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       alert("✅ Product deleted");
@@ -50,7 +51,7 @@ const AllProductsAdmin = () => {
     e.preventDefault();
     try {
       if (isEditing) {
-        await axios.put(`http://localhost:8080/api/products/${formData.id}`, {
+        await axios.put(`${BASE_URL}/api/products/${formData.id}`, {
           ...formData,
           category: { id: parseInt(formData.categoryId) }
         }, {
@@ -58,7 +59,7 @@ const AllProductsAdmin = () => {
         });
         alert("✅ Product updated");
       } else {
-        await axios.post(`http://localhost:8080/api/products/add`, {
+        await axios.post(`${BASE_URL}/api/products/add`, {
           name: formData.name,
           description: formData.description,
           price: formData.price,
@@ -69,7 +70,7 @@ const AllProductsAdmin = () => {
         });
 
         if (formData.imageUrl) {
-          await axios.put(`http://localhost:8080/api/products/update-image/${formData.name}`, {
+          await axios.put(`${BASE_URL}/api/products/update-image/${formData.name}`, {
             imageUrl: formData.imageUrl
           }, {
             headers: { Authorization: `Bearer ${token}` }
