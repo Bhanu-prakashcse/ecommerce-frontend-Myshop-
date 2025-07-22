@@ -56,7 +56,7 @@ const AdminDashboard = () => {
 
 
     // Fetch products
-    axios.get('http://localhost:8080/api/products/all', {
+    axios.get(`${BASE_URL}/api/products/all`, {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -77,7 +77,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     if (!token) return;
 
-    axios.get("http://localhost:8080/api/user/all", {
+    axios.get(`${BASE_URL}/api/user/all`, {
       headers: {
         Authorization: `Bearer ${token}`
       }
