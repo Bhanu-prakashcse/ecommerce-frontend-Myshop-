@@ -6,6 +6,7 @@ import BASE_URL from '../config';
 
 const Register = () => {
   const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
@@ -15,6 +16,7 @@ const Register = () => {
     try {
       await axios.post(`${BASE_URL}/api/auth/register?role=CUSTOMER`, {
         username,
+        email,
         password,
       });
 
@@ -32,6 +34,7 @@ const Register = () => {
 
       <form onSubmit={handleRegister}>
         <input value={username} onChange={(e) => setUsername(e.target.value)} required placeholder="Username" />
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="Email" /> {/* ✅ NEW */}
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required placeholder="Password" />
         <button type="submit">Sign Up</button>
       </form>
