@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+🛍️ E-Commerce Frontend (React.js)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend of a complete E-Commerce application, built using **React.js** and styled with **Tailwind CSS**. It connects seamlessly to a Spring Boot backend and provides an intuitive shopping experience for customers, along with a dedicated admin dashboard.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+🚀 Features
 
-### `npm start`
+- 🔐 User & Admin Authentication (JWT-based)
+- 🛍️ Product Listings with Add to Cart
+- 🛒 Shopping Cart & Checkout Process
+- 📦 Order History
+- 🧑‍💼 Admin Panel for Product Management
+- ⚡ Responsive Design for all devices
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🌐 Live Demo
 
-### `npm test`
+> 🖥️ [View Live Site on Netlify](https://ecomhub-spring.netlify.app) 
+> 🔗 Connected to backend API deployed on Render
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+<img width="800" height="276" alt="image" src="https://github.com/user-attachments/assets/fca0d812-6fc0-4dbc-8963-e1a8b92f5643" />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🧱 Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Layer       | Technology         |
+|-------------|--------------------|
+| Frontend    | React.js           |
+| Styling     | Tailwind CSS       |
+| State Mgmt  | React Hooks        |
+| HTTP Client | Axios              |
+| Routing     | React Router DOM   |
+| Deployment  | Netlify            |
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🔐 Authentication
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- JWT-based login
+- Role-based access (User / Admin)
+- Tokens stored in `localStorage` and included in headers for protected APIs
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🛒 User Features
 
-## Learn More
+- Browse all products
+- Add to cart and view cart
+- Place orders
+- View order history
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🧑‍💼 Admin Dashboard
 
-### Code Splitting
+- Add new products
+- Update product details
+- Delete products
+- View all products
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+⚙️ Environment Variables
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Create a `.env` file in root:
 
-### Making a Progressive Web App
+```env
+REACT_APP_API_URL=https://your-backend.onrender.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+🛠️ How to Run Locally
+git clone https://github.com/Bhanu-prakashcse/ecommerce-frontend-Myshop.git
+cd ecommerce-frontend-Myshop
+npm install         # Install dependencies
+npm start           # Run on http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+⚠️ Make sure to create a .env file in the root:
 
-### Deployment
+REACT_APP_API_URL=http://localhost:8080
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+👨‍💻 Developer
 
-### `npm run build` fails to minify
+Dandu Bhanuprakash 
+🎓 B.Tech (CSE - AIML), Graduated - 2025  
+💼 Java Backend Developer 
+🌐 Passionate about building production-grade web apps with Java & modern frontend technologies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+📄 License
+This project is licensed under the MIT License.
+
